@@ -144,8 +144,8 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-4 text-center">
-            <p className="text-[#718096] text-sm">
+          <div className="mt-4 text-right">
+            <p className="text-[#4A5568] text-xs">
               Created by{' '}
               <a
                 href="https://linkedin.com/in/harsimrankaur360"
