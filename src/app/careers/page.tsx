@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { ArrowRight, Briefcase, MapPin, Clock, ChevronDown } from 'lucide-react';
 import { getCareers } from '@/lib/sanity';
 
+// Revalidate every 60 seconds to pick up new content
+export const revalidate = 60;
+
 function getTypeLabel(type: string) {
   const labels: Record<string, string> = {
     'full-time': 'Full-time',

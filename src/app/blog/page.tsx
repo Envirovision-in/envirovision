@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
+import { ArrowRight, Calendar, User } from 'lucide-react';
 import { getBlogPosts, urlFor } from '@/lib/sanity';
+
+// Revalidate every 60 seconds to pick up new content
+export const revalidate = 60;
 
 interface BlogPost {
   _id: string;
