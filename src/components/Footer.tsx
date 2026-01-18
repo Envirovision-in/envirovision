@@ -144,6 +144,19 @@ export default function Footer() {
               ))}
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-[#718096] text-sm">
+              Created by{' '}
+              <a
+                href="https://linkedin.com/in/harsimrankaur360"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00968e] hover:text-[#007a73] transition-colors"
+              >
+                Harsimran
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
