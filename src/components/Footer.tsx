@@ -22,7 +22,7 @@ const navigation = {
     { name: 'Cookie Settings', href: '/cookies' },
   ],
   social: [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/envirovision-in/', icon: Linkedin },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Instagram', href: '#', icon: Instagram },
