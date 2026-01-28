@@ -49,16 +49,6 @@ const features = [
     description: 'Fill level sensors check if the container needs emptying. You receive notifications when containers are full.',
     icon: '📊',
   },
-  {
-    title: 'Real-time Data Management',
-    description: 'All data collected is transferred onto a cloud and processed in real-time for convenient waste management.',
-    icon: '☁️',
-  },
-  {
-    title: 'Mobile App for Reports',
-    description: 'Our app provides detailed statistics about waste collected, data for optimizing collection and technical status.',
-    icon: '📱',
-  },
 ];
 
 const audiences = [
