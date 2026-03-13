@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Briefcase, MapPin, Clock, ChevronDown } from 'lucide-react';
+import { ArrowRight, Briefcase, MapPin, Clock, ChevronDown, Rocket, FileText, ShieldCheck, BarChart3, Award, Sprout, Lock, Globe } from 'lucide-react';
 import { getCareers } from '@/lib/sanity';
 
 // Revalidate every 60 seconds to pick up new content
@@ -44,64 +44,82 @@ export default async function CareersPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-[#F7FAFC] to-white overflow-hidden">
+      <section className="relative py-20 lg:py-32 bg-[#1A1F2E] overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -right-40 top-20 w-80 h-80 bg-[#00968e] rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute -right-40 top-20 w-80 h-80 bg-[#00968e] rounded-full opacity-10 blur-3xl"></div>
           <div className="absolute -left-20 bottom-0 w-60 h-60 bg-[#00968e] rounded-full opacity-10 blur-3xl"></div>
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-              Join Our Team
+              Careers at EnviroVision
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1F2E] mb-6">
-              Build the Future of Sustainability
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              We&apos;re not hiring employees.<br />We&apos;re finding <span className="text-[#00968e]">co-builders.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[#718096]">
-              Join EnviroVision and be part of a team that&apos;s making a real difference. We&apos;re looking for passionate individuals who want to create a cleaner, greener India.
+            <p className="text-lg md:text-xl text-gray-300">
+              We are looking for people who see the same problem we see and want to spend years solving it. If fixing India&apos;s environmental infrastructure sounds like the most important work you could do right now — read on.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Join Us */}
-      <section className="py-16 bg-white">
+      {/* How We Work */}
+      <section className="py-20 lg:py-32 bg-[#F7FAFC]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center p-6 rounded-2xl bg-[#F7FAFC] border border-[#E2E8F0]">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-[#1A1F2E] mb-2">Startup Culture</h3>
-              <p className="text-[#718096] text-sm">Fast-paced, innovative environment</p>
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
+                How We Work
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-8">
+                Small team. Big problem. Real ownership.
+              </h2>
+              <div className="space-y-4 text-[#718096] text-base leading-relaxed">
+                <p>
+                  EnviroVision is an early-stage deep-tech startup incubated at Chandigarh University. We are a team of 11 — three founders and eight specialists — building technology that India has never had before.
+                </p>
+                <p>
+                  At this stage, every person on the team owns something meaningful. There is no layer of management between your work and its impact. If you build the brand, you are the brand. If you map the market, the company&apos;s GTM strategy is yours.
+                </p>
+                <p>
+                  We move fast, document our decisions, raise blockers early, and let data — not gut feel — drive everything. The people who thrive here are those who want to be the person who made something happen, not the person who was part of a team that did.
+                </p>
+              </div>
             </div>
-            <div className="text-center p-6 rounded-2xl bg-[#F7FAFC] border border-[#E2E8F0]">
-              <div className="text-3xl mb-3">🌱</div>
-              <h3 className="font-bold text-[#1A1F2E] mb-2">Impact-Driven</h3>
-              <p className="text-[#718096] text-sm">Work that matters for the planet</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-[#F7FAFC] border border-[#E2E8F0]">
-              <div className="text-3xl mb-3">📈</div>
-              <h3 className="font-bold text-[#1A1F2E] mb-2">Growth</h3>
-              <p className="text-[#718096] text-sm">Opportunities to learn and grow</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-[#F7FAFC] border border-[#E2E8F0]">
-              <div className="text-3xl mb-3">🤝</div>
-              <h3 className="font-bold text-[#1A1F2E] mb-2">Collaboration</h3>
-              <p className="text-[#718096] text-sm">Work with passionate people</p>
+
+            <div className="space-y-4">
+              {[
+                { Icon: Rocket, title: 'Default to shipping', desc: 'A working prototype beats a perfect design doc. We build, test, learn, and iterate — fast.' },
+                { Icon: FileText, title: 'Document decisions', desc: 'Every architectural and strategic choice gets a written rationale. Future us will thank us.' },
+                { Icon: ShieldCheck, title: 'Own your layer', desc: 'You own your workstream entirely. Raise blockers early — don\'t wait for a meeting.' },
+                { Icon: BarChart3, title: 'Data beats opinion', desc: 'Benchmark everything. Accuracy claims need numbers, not feelings.' },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4 items-start p-4 bg-white border border-[#E2E8F0] rounded-xl">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <item.Icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#1A1F2E] mb-1">{item.title}</h3>
+                    <p className="text-[#718096] text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 lg:py-32 bg-[#F7FAFC]">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
               Open Positions
             </h2>
             <p className="text-lg text-[#718096]">
-              Find your next opportunity with us
+              We have a world-class mission, a working product, and 4 patents. What we need now are people to build the brand and prove the market.
             </p>
           </div>
 
@@ -230,14 +248,52 @@ export default async function CareersPage() {
         </div>
       </section>
 
+      {/* What We Offer */}
+      <section className="py-20 lg:py-32 bg-[#F7FAFC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
+              What We Offer
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
+              More than a job title.
+            </h2>
+            <p className="text-lg text-[#718096] max-w-2xl mx-auto">
+              We are a pre-seed startup. We can&apos;t compete with large company salaries — but we offer something most can&apos;t.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { Icon: Award, title: 'Real Ownership', desc: 'Equity-based compensation. You own a piece of what you build.' },
+              { Icon: Sprout, title: 'Founding Team Status', desc: 'Join as a co-builder, not an employee. Your decisions shape the company.' },
+              { Icon: Lock, title: 'Access to IP', desc: 'Work directly with patent-backed technology that no one else has.' },
+              { Icon: Globe, title: 'Mission That Matters', desc: 'Your work has a direct, measurable impact on India\'s environment.' },
+            ].map((perk) => (
+              <div key={perk.title} className="bg-white border border-[#E2E8F0] rounded-xl p-6 text-center">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <perk.Icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="font-bold text-[#1A1F2E] mb-2">{perk.title}</h3>
+                <p className="text-[#718096] text-sm">{perk.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 lg:py-32 bg-[#1A1F2E] text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
+            Interested?
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Don&apos;t See the Right Role?
+            Share this. Know someone?{' '}
+            <span className="text-[#00968e]">Tag them.</span>
           </h2>
-          <p className="text-lg text-[#718096] mb-10">
-            We&apos;re always looking for talented individuals who share our passion for sustainability. Send us your resume and let&apos;s connect!
+          <p className="text-lg text-gray-400 mb-10">
+            The best people are rarely the ones actively looking. If you know someone who belongs here, send them this page.
           </p>
           <Link
             href="/contact"

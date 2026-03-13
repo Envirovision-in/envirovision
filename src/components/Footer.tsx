@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 const navigation = {
@@ -11,10 +11,10 @@ const navigation = {
     { name: 'Blog', href: '/blog' },
   ],
   solutions: [
-    { name: 'Waste Segregation', href: '/#solutions' },
-    { name: 'Manure Production', href: '/#solutions' },
-    { name: 'Anti-Pollution Shield', href: '/#solutions' },
-    { name: 'Wastewater Recycling', href: '/#solutions' },
+    { name: 'EcoSarthi (Waste)', href: '/#product' },
+    { name: 'Water Management — Coming Soon', href: '/#pipeline' },
+    { name: 'Organic Waste — Pipeline', href: '/#pipeline' },
+    { name: 'Air Quality — Pipeline', href: '/#pipeline' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -24,8 +24,8 @@ const navigation = {
   social: [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/envirovision-in/', icon: Linkedin },
     { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'Facebook', href: 'https://www.facebook.com/people/EnviroVision/61586706702429/', icon: Facebook },
+    { name: 'Instagram', href: 'https://www.instagram.com/envirovision9', icon: Instagram },
   ],
 };
 
@@ -40,7 +40,7 @@ export default function Footer() {
               <Logo variant="dark" size="md" />
             </Link>
             <p className="text-[#718096] text-sm mb-4">
-              Breathing new life into the environment. We turn everyday waste into valuable resources, promoting cleaner cities and sustainable living.
+              Building India&apos;s environmental infrastructure — one patent-backed product at a time. We make environmental responsibility automatic, affordable, and measurable.
             </p>
             <div className="flex gap-4">
               {navigation.social.map((item) => (
@@ -111,15 +111,6 @@ export default function Footer() {
                 >
                   <Mail className="h-5 w-5 flex-shrink-0" />
                   <span>marketing@envirovision.in</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+91XXXXXXXXXX"
-                  className="flex items-center gap-3 text-[#718096] hover:text-[#00968e] transition-colors text-sm"
-                >
-                  <Phone className="h-5 w-5 flex-shrink-0" />
-                  <span>+91 XXX XXX XXXX</span>
                 </a>
               </li>
             </ul>

@@ -1,130 +1,140 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowRight, Recycle, Leaf, Droplets, Shield, Building2, Factory, Home as HomeIcon, Landmark } from 'lucide-react';
+import { ArrowRight, Building2, HomeIcon, Landmark, GraduationCap, Layers, BarChart3, Zap, TrendingDown, Package, Scan, Filter, FileCheck, Shuffle } from 'lucide-react';
 
-const solutions = [
+const ecoFeatures = [
   {
-    title: 'Automatic Waste Segregation System',
-    tagline: 'Smart Bins, Smarter Cities.',
-    description: 'AI-powered waste sorting for metallic, non-metallic, glass, and plastic materials. Designed for urban spaces, industries, and housing societies.',
-    icon: Recycle,
+    Icon: Layers,
+    title: 'AI-Powered Auto-Sorting',
+    desc: 'Classifies wet organic, dry paper, plastic, glass, metal, and e-waste with 98% hybrid accuracy — trained on Indian waste streams, not Western datasets.',
   },
   {
-    title: 'Manure Production from Waste',
-    tagline: 'Turn Trash into Treasure.',
-    description: 'Transform organic waste into nutrient-rich compost. Ideal for agricultural and urban farming use.',
-    icon: Leaf,
+    Icon: BarChart3,
+    title: 'BRSR-Ready ESG Dashboard',
+    desc: 'Every sort is logged. Auto-generated monthly reports match the SEBI BRSR waste disclosure format exactly — audit-ready from day one.',
   },
   {
-    title: 'Anti-Pollution Face Shield',
-    tagline: 'Breathe Better, Live Better.',
-    description: 'Advanced filtration technology to block pollutants. An easy to wear alternative for urban dwellers and industrial workers.',
-    icon: Shield,
+    Icon: Zap,
+    title: 'Offline-First, Edge AI',
+    desc: 'All classification runs on-device. Works without internet in any building. Cloud syncs for dashboard and reporting, not core function.',
   },
   {
-    title: 'Wastewater Recycling System',
-    tagline: 'Every Drop Counts.',
-    description: 'Reclaim, recycle, and reuse wastewater. Tailored for residential, commercial, and industrial applications.',
-    icon: Droplets,
+    Icon: TrendingDown,
+    title: '3× Cheaper Than Alternatives',
+    desc: 'Priced for Indian budgets. No expensive imports. Manufactured in India for India\'s waste streams and operating conditions.',
   },
 ];
 
-const features = [
+const techSpecs = [
+  { label: 'AI Vision', detail: 'MobileNetV3, edge inference' },
+  { label: '4-Sensor Array', detail: 'weight, moisture, NIR, metal' },
+  { label: 'Auto-Compression', detail: 'halves bin pickup frequency' },
+  { label: 'Offline-Capable', detail: 'works without internet' },
+  { label: 'Cloud Dashboard', detail: 'real-time ESG data portal' },
+  { label: 'Multilingual UI', detail: 'Hindi, English, regional' },
+];
+
+const howItWorks = [
+  { step: '01', Icon: Package, title: 'Drop Any Waste', desc: 'User places waste on the intake platform. No sorting, no labels, no decision required. One bin for everything.' },
+  { step: '02', Icon: Scan, title: 'AI Identifies Material', desc: 'AI camera and 4-sensor array classify waste type in under 2 seconds — wet, dry, recyclable, e-waste, or reject.' },
+  { step: '03', Icon: Filter, title: 'Automatic Sorting', desc: 'Servo actuators route waste to the correct internal bin. Plastic and paper are compressed to halve pickup frequency.' },
+  { step: '04', Icon: BarChart3, title: 'ESG Data Generated', desc: 'Every sort event is logged. Fill level alerts go to housekeeping. BRSR-formatted waste reports auto-generated monthly.' },
+];
+
+const whyCards = [
   {
-    title: 'AI-based Waste Recognition',
-    description: 'Our system uses artificial intelligence-based recognition to identify waste with 95% segregation accuracy.',
-    icon: '🤖',
+    label: 'For Corporates',
+    title: 'BRSR Compliance, Automated',
+    desc: 'SEBI mandates waste data reporting for 1,000+ listed companies. EcoSarthi generates audit-ready BRSR waste reports automatically — no guesswork, no manual data entry.',
   },
   {
-    title: 'Automatic Waste Sorting',
-    description: 'The recognized waste is transported to the right fraction. Everything happens 100% automatically.',
-    icon: '⚡',
+    label: 'For Operations',
+    title: 'Measurable ROI from Day One',
+    desc: 'Compression technology halves bin pickup frequency. Smart fill-level alerts mean no overflow. Sorted waste connects to verified recycler partners — turning a cost into a revenue stream.',
   },
   {
-    title: 'Compression Technology',
-    description: 'Plastic and paper get compressed to decrease the volume and lower the frequency of bin emptying.',
-    icon: '📦',
-  },
-  {
-    title: 'Fill Level Monitoring',
-    description: 'Fill level sensors check if the container needs emptying. You receive notifications when containers are full.',
-    icon: '📊',
+    label: 'For India',
+    title: 'India-Native, Not India-Adapted',
+    desc: 'Trained on Indian waste streams, not Western datasets. Priced for Indian budgets. Built to work offline in any Indian building. 3× cheaper than imported alternatives.',
   },
 ];
 
-const audiences = [
-  {
-    title: 'Urban Communities',
-    description: 'Turning cities into clean, modern ecosystems.',
-    icon: Building2,
-  },
-  {
-    title: 'Housing Societies',
-    description: 'Smart waste systems for smarter living.',
-    icon: HomeIcon,
-  },
-  {
-    title: 'Industries',
-    description: 'Eco-friendly solutions for a sustainable bottom line.',
-    icon: Factory,
-  },
-  {
-    title: 'Government & Smart Cities',
-    description: "Partnering to achieve India's environmental goals.",
-    icon: Landmark,
-  },
+const serveCards = [
+  { icon: Building2, title: 'Corporate Offices', desc: 'BRSR-mandated companies get automated waste data and audit-ready reports without changing a single habit.' },
+  { icon: HomeIcon, title: 'Housing Societies', desc: 'Smart waste systems for smarter living — with sorted recyclables generating a revenue share for the community.' },
+  { icon: GraduationCap, title: 'Universities & Campuses', desc: 'High-footfall environments that benefit from automated sorting, ESG reporting, and student engagement.' },
+  { icon: Landmark, title: 'Government & Smart Cities', desc: 'Aligned with Swachh Bharat, Smart Cities Mission, and AMRUT 2.0. Scalable from one building to an entire city.' },
 ];
+
+const pipeline = [
+  { color: 'bg-[#00968e]', name: 'Solid Waste — EcoSarthi', timing: 'Now', timingColor: 'text-[#00968e]' },
+  { color: 'bg-blue-400', name: 'Water Management', timing: 'Coming Soon', timingColor: 'text-blue-400' },
+  { color: 'bg-white/25', name: 'Organic Waste & AgriTech', timing: 'Pipeline', timingColor: 'text-white/40' },
+  { color: 'bg-white/25', name: 'Air Quality', timing: 'Pipeline', timingColor: 'text-white/40' },
+];
+
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#F7FAFC] to-white overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-[#1A1F2E] overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -right-40 -top-40 w-96 h-96 bg-[#00968e] rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute -right-40 -top-40 w-[500px] h-[500px] bg-[#00968e] rounded-full opacity-10 blur-3xl"></div>
           <div className="absolute -left-20 bottom-0 w-80 h-80 bg-[#007a73] rounded-full opacity-10 blur-3xl"></div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-                Smart Sustainability Solutions
+              <span className="inline-block bg-[#00968e]/20 border border-[#00968e]/40 text-[#00968e] font-semibold text-xs uppercase tracking-wider px-3 py-1.5 rounded-full mb-6">
+                India&apos;s Environmental Infrastructure Company
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1F2E] leading-tight mb-6">
-                Breathing New Life Into the{' '}
-                <span className="text-[#00968e]">Environment</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Building the<br />infrastructure<br />India&apos;s cities<br /><span className="text-[#00968e]">need now.</span>
               </h1>
-              <p className="text-lg text-[#718096] mb-8 max-w-xl">
-                At EnviroVision, we turn everyday waste into valuable resources, promoting cleaner cities and sustainable living. Let&apos;s turn trash into treasure—because every small change leads to a big impact.
+              <p className="text-lg text-white/65 mb-8 max-w-xl leading-relaxed">
+                EnviroVision is on a mission to make environmental responsibility automatic — starting with EcoSarthi, our AI-powered waste segregation system built for India.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#00968e] hover:bg-[#007a73] text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-lg"
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                <button
+                  onClick={() => scrollTo('product')}
+                  className="inline-flex items-center justify-center gap-2 bg-[#00968e] hover:bg-[#007a73] text-white px-7 py-3.5 rounded-lg font-semibold transition-all"
                 >
-                  Contact Us
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+                  See EcoSarthi
+                  <ArrowRight className="w-4 h-4" />
+                </button>
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F7FAFC] text-[#2D3748] px-8 py-4 rounded-full font-semibold border-2 border-[#E2E8F0] transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-white/25 text-white hover:bg-white/10 px-7 py-3.5 rounded-lg font-semibold transition-all"
                 >
-                  Learn More
+                  Our Mission
                 </Link>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['4 Patents Filed', 'CU Incubated', '98% Accuracy Target'].map((badge) => (
+                  <span key={badge} className="bg-white/7 border border-white/15 text-white/75 text-xs font-medium px-3 py-1.5 rounded-full">{badge}</span>
+                ))}
               </div>
             </div>
 
-            <div className="relative animate-slide-in-right">
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-[#E2E8F0]">
-                <div className="aspect-square bg-gradient-to-br from-[#00968e] via-[#007a73] to-[#005f5a] rounded-2xl flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <Recycle className="w-24 h-24 mx-auto mb-4" />
-                    <p className="text-xl font-semibold">Smart Waste Management</p>
-                    <p className="text-sm opacity-90 mt-2">AI-Powered Solutions</p>
-                  </div>
+            <div className="flex flex-col gap-4 animate-slide-in-right">
+              <div className="bg-white/7 border border-white/12 rounded-xl p-6 backdrop-blur-sm">
+                <div className="text-4xl font-bold text-[#00968e] mb-1">₹1L Cr+</div>
+                <div className="text-white/55 text-sm">lost every year in recyclable material due to poor waste segregation in India</div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                  <div className="text-3xl font-bold text-[#00968e] mb-1">&lt;30%</div>
+                  <div className="text-white/50 text-xs">waste properly segregated at source</div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-[#00968e] text-white px-6 py-3 rounded-full font-semibold shadow-lg">
-                  95% Accuracy
+                <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                  <div className="text-3xl font-bold text-[#00968e] mb-1">1,000+</div>
+                  <div className="text-white/50 text-xs">firms legally required to report waste data (SEBI BRSR)</div>
                 </div>
               </div>
             </div>
@@ -132,55 +142,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
+      {/* Who We Are */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#00968e] to-[#007a73] overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 rounded-full bg-gradient-to-br from-[#00968e] to-[#007a73] flex items-center justify-center shadow-2xl">
-                    <Leaf className="w-32 h-32 text-white" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-6">
+              <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
                 Who We Are
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-5 leading-tight">
+                We build technology that makes environmental responsibility automatic.
               </h2>
-              <p className="text-lg text-[#718096] mb-6">
-                EnviroVision is more than a company; it&apos;s a call to action. As India&apos;s cities expand, so do its environmental challenges. We are a new-age startup on a mission to tackle pollution, waste, and water management with cutting-edge, cost-effective solutions that empower communities, industries, and individuals.
+              <p className="text-lg text-[#718096] mb-8 leading-relaxed">
+                EnviroVision is a deep-tech startup on a mission to build India&apos;s environmental infrastructure — starting with smart waste management and expanding across the full spectrum of India&apos;s environmental challenges.
               </p>
-              <p className="text-xl font-semibold text-[#1A1F2E] mb-8">
-                Our mantra? <span className="text-[#00968e]">Innovate, Inspire, Impact.</span>
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <h3 className="font-semibold text-[#1A1F2E]">Why We Do It:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
+              <ul className="space-y-4 mb-8">
+                {[
+                  "To align with India's bold sustainability and Smart Cities goals",
+                  "To give companies the data they need to meet SEBI BRSR compliance requirements",
+                  "To build affordable, India-native solutions — not adapted Western imports",
+                  "To ensure future generations inherit a measurably cleaner India",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm">✓</span>
+                      <span className="text-white text-xs">✓</span>
                     </div>
-                    <span className="text-[#718096]">To align with India&apos;s bold sustainability goals.</span>
+                    <span className="text-[#718096]">{item}</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <span className="text-[#718096]">To create scalable solutions for growing cities.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gradient-to-br from-[#007a73] to-[#005f5a] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <span className="text-[#718096]">To ensure future generations inherit a thriving planet.</span>
-                  </li>
-                </ul>
-              </div>
-
+                ))}
+              </ul>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 bg-[#1A1F2E] hover:bg-[#2D3748] text-white px-6 py-3 rounded-full font-semibold transition-all"
@@ -189,49 +179,102 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+
+            <div className="bg-[#1A1F2E] rounded-2xl p-10 flex flex-col gap-5">
+              <div className="flex flex-wrap gap-2">
+                {['Innovate', 'Inspire', 'Impact'].map((chip) => (
+                  <span key={chip} className="bg-[#00968e]/20 border border-[#00968e]/40 text-[#00968e] text-sm font-semibold px-4 py-1.5 rounded-full">{chip}</span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['Deep Tech', 'India-First', 'Patent-Backed'].map((chip) => (
+                  <span key={chip} className="bg-white/8 border border-white/15 text-white/70 text-sm font-medium px-4 py-1.5 rounded-full">{chip}</span>
+                ))}
+              </div>
+              <div className="border-l-4 border-[#00968e] pl-5 mt-2">
+                <p className="text-white font-semibold text-lg italic leading-snug">
+                  &ldquo;The root cause of India&apos;s waste crisis isn&apos;t behaviour. It&apos;s infrastructure. We fix the infrastructure.&rdquo;
+                </p>
+                <p className="text-white/40 text-xs mt-2">— EnviroVision founding principle</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section id="solutions" className="py-20 lg:py-32 bg-[#F7FAFC]">
+      {/* EcoSarthi Product */}
+      <section id="product" className="py-20 lg:py-32 bg-[#F7FAFC]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-              Our Solutions
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
-              Smart Solutions for a Sustainable India
-            </h2>
-            <p className="text-lg text-[#718096] max-w-2xl mx-auto">
-              Discover our innovative range of products designed to protect and restore our environment.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution) => (
-              <div
-                key={solution.title}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#E2E8F0]"
+          <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-8">
+            Our Flagship Product
+          </span>
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="text-5xl font-bold text-[#00968e] leading-none mb-1">EcoSarthi</h2>
+              <p className="text-sm text-[#718096] italic mb-5">Smart AI Waste Segregation — Built for India</p>
+              <p className="text-[#718096] text-base leading-relaxed mb-8">
+                EcoSarthi is India&apos;s first AI-powered smart waste bin that automatically sorts waste at the point of disposal — so your office, campus, or housing society gets verified ESG data without anyone lifting a finger. No behaviour change required. The machine does the work.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {ecoFeatures.map((f) => (
+                  <li key={f.title} className="flex items-start gap-4 p-4 bg-white border border-[#E2E8F0] rounded-xl">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <f.Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <strong className="block text-sm font-semibold text-[#1A1F2E] mb-1">{f.title}</strong>
+                      <span className="text-xs text-[#718096] leading-relaxed">{f.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[#00968e] hover:bg-[#007a73] text-white px-7 py-3.5 rounded-lg font-semibold transition-all"
               >
-                <div className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-xl flex items-center justify-center mb-6">
-                    <solution.icon className="w-7 h-7 text-white" />
+                Request a Pilot
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 sticky top-24">
+              {/* Accuracy circle */}
+              <div className="text-center mb-8">
+                <div className="w-28 h-28 rounded-full border-4 border-[#00968e] mx-auto mb-4 flex items-center justify-center shadow-[0_0_32px_rgba(0,150,142,0.3)]">
+                  <div>
+                    <div className="text-2xl font-bold text-[#00968e] leading-none">98%</div>
+                    <div className="text-[8px] text-[#00968e] tracking-widest">TARGET</div>
                   </div>
-                  <h3 className="text-xl font-bold text-[#00968e] mb-2">{solution.title}</h3>
-                  <p className="text-[#1A1F2E] font-medium mb-3">{solution.tagline}</p>
-                  <p className="text-[#718096]">{solution.description}</p>
+                </div>
+                <div className="text-white/50 text-xs">Hybrid AI + Sensor Accuracy</div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                {techSpecs.map((s) => (
+                  <li key={s.label} className="flex items-center gap-3 text-sm text-white/60 pb-3 border-b border-white/7 last:border-0 last:pb-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00968e] flex-shrink-0"></span>
+                    <strong className="text-white/90 font-medium">{s.label}</strong>
+                    <span>—</span>
+                    <span>{s.detail}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="pt-5 border-t border-white/10">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-white/35 mb-3">Designed For</div>
+                <div className="flex flex-wrap gap-2">
+                  {['Corporate Offices', 'Universities', 'Housing Societies', 'Smart Cities'].map((tag) => (
+                    <span key={tag} className="bg-[#00968e]/15 border border-[#00968e]/30 text-[#00968e] text-xs font-medium px-2.5 py-1 rounded-full">{tag}</span>
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      {/* How It Works */}
+      <section id="how" className="py-20 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-14">
             <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
               How It Works
             </span>
@@ -239,105 +282,76 @@ export default function HomePage() {
               Where AI Meets Ecology
             </h2>
             <p className="text-lg text-[#718096] max-w-2xl mx-auto">
-              Our flagship products use state-of-the-art technology and artificial intelligence to make waste management more efficient.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="text-center p-6"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-bold text-[#1A1F2E] mb-2">{feature.title}</h3>
-                <p className="text-[#718096] text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why EnviroVision Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#00968e] to-[#007a73] text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Recycle className="w-32 h-32 text-white/50" />
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Why EnviroVision?
-              </h2>
-              <ul className="space-y-6">
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Building2 className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-semibold">For Cities:</span>
-                    <span className="ml-2 opacity-90">Cleaner streets, better waste management.</span>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Factory className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-semibold">For Industries:</span>
-                    <span className="ml-2 opacity-90">Smart, sustainable systems for operational efficiency.</span>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <HomeIcon className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-semibold">For You:</span>
-                    <span className="ml-2 opacity-90">Affordable solutions for a healthier, greener life.</span>
-                  </div>
-                </li>
-              </ul>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-[#007a73] hover:bg-[#F7FAFC] px-8 py-4 rounded-full font-semibold transition-all mt-10"
-              >
-                Join The Green Revolution
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Serve Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
-              Who We Serve
-            </h2>
-            <p className="text-lg text-[#718096] max-w-2xl mx-auto">
-              Our solutions are designed to serve diverse communities and sectors across India.
+              From a single item dropped in the bin to a verified ESG report — EcoSarthi handles the entire pipeline automatically.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {audiences.map((audience) => (
-              <div
-                key={audience.title}
-                className="group relative bg-[#F7FAFC] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
-              >
-                <div className="aspect-[4/3] bg-gradient-to-br from-[#00968e] via-[#007a73] to-[#005f5a] flex items-center justify-center">
-                  <audience.icon className="w-16 h-16 text-white" />
+            {howItWorks.map((card) => (
+              <div key={card.step} className="relative bg-[#F7FAFC] border border-[#E2E8F0] rounded-xl p-6">
+                <span className="absolute top-4 right-4 text-xs font-bold text-[#00968e] tracking-widest opacity-60">{card.step}</span>
+                <div className="w-12 h-12 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-xl flex items-center justify-center mb-4">
+                  <card.Icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="p-6 bg-[#F7FAFC]">
-                  <h3 className="font-bold text-[#1A1F2E] mb-2">{audience.title}</h3>
-                  <p className="text-[#718096] text-sm">{audience.description}</p>
+                <h3 className="font-bold text-[#1A1F2E] mb-2">{card.title}</h3>
+                <p className="text-[#718096] text-sm leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why EcoSarthi */}
+      <section className="py-20 lg:py-32 bg-[#F7FAFC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
+              Why EcoSarthi
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
+              Built different. Built for India.
+            </h2>
+            <p className="text-lg text-[#718096] max-w-2xl mx-auto">
+              Most smart bins are imported and built for Western conditions. EcoSarthi is India-native from the ground up.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-7">
+            {whyCards.map((card) => (
+              <div key={card.title} className="bg-white border border-[#E2E8F0] rounded-xl p-7">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#00968e] mb-3">{card.label}</div>
+                <h3 className="text-lg font-bold text-[#1A1F2E] mb-3">{card.title}</h3>
+                <p className="text-[#718096] text-sm leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
+              Who We Serve
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
+              Solutions designed for the communities shaping India&apos;s future.
+            </h2>
+            <p className="text-lg text-[#718096] max-w-2xl mx-auto">
+              EcoSarthi is built for diverse sectors — wherever waste is generated and ESG data is needed.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serveCards.map((card) => (
+              <div key={card.title} className="bg-[#F7FAFC] border border-[#E2E8F0] rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-[#00968e] via-[#007a73] to-[#005f5a] flex items-center justify-center">
+                  <card.icon className="w-14 h-14 text-white" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-[#1A1F2E] mb-2">{card.title}</h3>
+                  <p className="text-[#718096] text-sm leading-relaxed">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -345,22 +359,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Pipeline */}
+      <section id="pipeline" className="py-20 lg:py-32 bg-[#F7FAFC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#1A1F2E] rounded-2xl p-10 lg:p-14">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="inline-block text-[#00968e] font-semibold text-xs uppercase tracking-widest mb-4">
+                  Beyond EcoSarthi
+                </span>
+                <h3 className="text-3xl font-bold text-white mb-4 leading-tight">
+                  One platform.<br />India&apos;s full environmental stack.
+                </h3>
+                <p className="text-white/60 text-base leading-relaxed">
+                  EcoSarthi is the first of several products we are building to address India&apos;s environmental challenges. Water, air, organic waste — the same approach: patent-backed IP, built for India, affordable at scale. More details coming soon.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                {pipeline.map((item) => (
+                  <div key={item.name} className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-lg px-5 py-4">
+                    <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${item.color}`}></span>
+                    <span className="text-white font-medium text-sm flex-1">{item.name}</span>
+                    <span className={`text-xs font-bold uppercase tracking-wider ${item.timingColor}`}>{item.timing}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="py-20 lg:py-32 bg-[#1A1F2E]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
             Got Questions?
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Join the <span className="text-[#00968e]">Green Revolution.</span>
           </h2>
-          <p className="text-lg text-[#718096] mb-10">
-            We are here to help you. Leave us a message and we&apos;ll get back to you with the details as soon as possible.
+          <p className="text-lg text-[#718096] mb-10 max-w-lg mx-auto">
+            We are here to help. Leave us a message and we&apos;ll get back to you with details as soon as possible.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#00968e] hover:bg-[#007a73] text-white px-8 py-4 rounded-full font-semibold transition-all"
-          >
-            Get in Touch
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-[#00968e] hover:bg-[#007a73] text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              Get in Touch
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center gap-2 border border-white/25 text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              Learn More About Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>
