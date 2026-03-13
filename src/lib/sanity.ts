@@ -47,19 +47,3 @@ export async function getBlogPost(slug: string) {
   `, { slug });
 }
 
-// Career queries
-export async function getCareers() {
-  return client.fetch(`
-    *[_type == "career"] | order(_createdAt desc) {
-      _id,
-      title,
-      department,
-      location,
-      type,
-      description,
-      responsibilities,
-      requirements,
-      desiredExperience
-    }
-  `);
-}
