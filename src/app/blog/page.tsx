@@ -46,13 +46,13 @@ export default async function BlogPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-              Our Blog
+              The EnviroVision Blog
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1F2E] mb-6">
-              Insights & Updates
+              Ideas, insights, and the data behind building greener cities.
             </h1>
             <p className="text-lg md:text-xl text-[#718096]">
-              Stay informed about the latest in sustainability, green technology, and environmental innovation.
+              Perspectives from the team building India&apos;s environmental infrastructure — on waste, technology, regulation, and the hard work of turning a mission into a movement.
             </p>
           </div>
         </div>
@@ -207,33 +207,6 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-            Stay Updated
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-6">
-            Subscribe to Our Newsletter
-          </h2>
-          <p className="text-lg text-[#718096] mb-8">
-            Get the latest insights on sustainability, green technology, and EnviroVision updates delivered to your inbox.
-          </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full border border-[#E2E8F0] focus:border-[#00968e] focus:ring-2 focus:ring-[#00968e]/20 outline-none transition-all"
-            />
-            <button
-              type="submit"
-              className="bg-[#00968e] hover:bg-[#007a73] text-white px-8 py-4 rounded-full font-semibold transition-all"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -105,18 +105,6 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#00968e] to-[#007a73] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#1A1F2E] mb-1">Call Us</h3>
-                    <a href="tel:+91XXXXXXXXXX" className="text-[#718096] hover:text-[#00968e] transition-colors">
-                      +91 XXX XXX XXXX
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#007a73] to-[#005f5a] rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
@@ -127,15 +115,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Office Hours */}
-              <div className="mt-12 p-6 bg-[#F7FAFC] rounded-2xl border border-[#E2E8F0]">
-                <h3 className="font-semibold text-[#1A1F2E] mb-4">Office Hours</h3>
-                <div className="space-y-2 text-[#718096]">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
-                  <p>Saturday: 10:00 AM - 2:00 PM IST</p>
-                  <p>Sunday: Closed</p>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
