@@ -35,12 +35,12 @@ const founders = [
   {
     name: 'Sayantani Nandy',
     role: 'CEO & Co-Founder',
-    bio: 'Serial entrepreneur who previously raised over $10 million for Soliyarn. Sayantani leads company strategy, fundraising, and investor relations — bringing operational discipline from scaling a company in a hard market.',
+    bio: 'Serial entrepreneur who previously raised over $10 million for a sustainable deep tech startup. Sayantani leads company strategy, fundraising, and investor relations — bringing operational discipline from scaling a company in a hard market.',
     tags: ['Strategy', 'Fundraising', 'Partnerships'],
   },
   {
     name: 'Diotima Bose',
-    role: 'CSO & Co-Founder ',
+    role: 'CSO & Founder',
     bio: 'PhD candidate in Environmental Science, based in the US. Original patent holder and the scientific backbone of EnviroVision — Diotima defines the waste classification framework, IP strategy, and the ESG methodology that makes our data credible.',
     tags: ['Environmental Science', 'IP & Patents', 'ESG'],
   },
@@ -95,7 +95,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-[#718096] text-base leading-relaxed">
                 <p>
-                  EnviroVision began not in a boardroom, but in a university research lab. Our co-founder and Chief Science Officer, Diotima Bose, was deep into her PhD in Environmental Science when she encountered a question that wouldn&apos;t let her go: <strong className="text-[#1A1F2E]">why, despite decades of awareness campaigns, does India still lose over ₹1 lakh crore every year in recyclable material?</strong>
+                  EnviroVision began not in a boardroom, but in a university research lab. Our founder and Chief Science Officer, Diotima Bose, was deep into her PhD in Environmental Science when she encountered a question that wouldn&apos;t let her go: <strong className="text-[#1A1F2E]">why, despite decades of awareness campaigns, does India still lose over ₹1 lakh crore every year in recyclable material?</strong>
                 </p>
                 <p>
                   The answer wasn&apos;t apathy. It wasn&apos;t a lack of education. The answer was infrastructure — or more precisely, the absence of it. India had no affordable, automated system to sort waste at the point it was generated. Every solution either required people to change their behaviour, or cost so much it was only viable for wealthy Western cities.
@@ -109,7 +109,7 @@ export default function AboutPage() {
                   So Diotima filed a patent. Not a business plan — a patent. A mechanical sorting mechanism that could sit inside a single bin and automatically separate metallic from non-metallic waste, with no human input required. That patent became the foundation of everything EnviroVision is building today.
                 </p>
                 <p>
-                  Alongside her, Sayantani Nandy — a serial entrepreneur who had previously raised over $10 million for Soliyarn — saw what the technology could become at scale. And Mallar Das, a hardware and software engineer with full-stack embedded systems experience, joined to turn the patent into a real product that could be deployed, measured, and scaled.
+                  Alongside her, Sayantani Nandy — a serial entrepreneur who had previously raised over $10 million for a sustainable deep tech startup — saw what the technology could become at scale. And Mallar Das, a hardware and software engineer with full-stack embedded systems experience, joined to turn the patent into a real product that could be deployed, measured, and scaled.
                 </p>
                 <p>
                   Three founders. Three disciplines. One shared belief: <strong className="text-[#1A1F2E]">India&apos;s environmental challenges are infrastructure problems, not behaviour problems.</strong> Fix the infrastructure, and everything else follows.
