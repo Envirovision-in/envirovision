@@ -31,33 +31,6 @@ const values = [
   },
 ];
 
-const founders = [
-  {
-    name: 'Sayantani Nandy',
-    role: 'CEO & Co-Founder',
-    bio: 'Serial entrepreneur who previously raised over $10 million for a sustainable deep tech startup. Sayantani leads company strategy, fundraising, and investor relations — bringing operational discipline from scaling a company in a hard market.',
-    tags: ['Strategy', 'Fundraising', 'Partnerships'],
-  },
-  {
-    name: 'Diotima Bose',
-    role: 'CSO & Founder',
-    bio: 'PhD candidate in Environmental Science, based in the US. Original patent holder and the scientific backbone of EnviroVision — Diotima defines the waste classification framework, IP strategy, and the ESG methodology that makes our data credible.',
-    tags: ['Environmental Science', 'IP & Patents', 'ESG'],
-  },
-  {
-    name: 'Mallar Das',
-    role: 'CTO & Co-Founder',
-    bio: 'India-based engineer who owns the full technical stack — from hardware design and sensor integration to AI model training, cloud backend, and firmware. Prior startup experience building hardware-software integrated products from scratch.',
-    tags: ['Hardware', 'AI/ML', 'Cloud'],
-  },
-];
-
-const advisors = [
-  { name: 'Subrata Bose', role: 'Strategic & Financial Advisor', desc: 'Corporate structuring, funding strategy, and investor network.' },
-  { name: 'Dr. Somraj Guha', role: 'Org Management Advisor', desc: 'Team structure, process design, and pharma research background.' },
-  { name: 'Dr. Gurmeet Kaur', role: 'CU Faculty Mentor', desc: 'Campus access, academic credibility, and student team pipeline.' },
-];
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -188,51 +161,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 lg:py-32 bg-[#F7FAFC]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-4">
-              The Team
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1F2E] mb-4">
-              Founders built to go the distance.
-            </h2>
-            <p className="text-lg text-[#718096]">Three co-founders. Three disciplines. One mission.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {founders.map((founder) => (
-              <div key={founder.name} className="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-xl transition-all p-6">
-                <h3 className="text-xl font-bold text-[#1A1F2E] mb-1">{founder.name}</h3>
-                <div className="text-xs font-semibold text-[#00968e] uppercase tracking-wider mb-3">{founder.role}</div>
-                <p className="text-[#718096] text-sm leading-relaxed mb-4">{founder.bio}</p>
-                <div className="flex flex-wrap gap-2">
-                  {founder.tags.map((tag) => (
-                    <span key={tag} className="bg-[#e8f5ed] text-[#00968e] text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div>
-            <span className="inline-block text-[#00968e] font-semibold text-sm uppercase tracking-wider mb-6">
-              Advisors
-            </span>
-            <div className="grid md:grid-cols-3 gap-5">
-              {advisors.map((advisor) => (
-                <div key={advisor.name} className="bg-white border border-[#E2E8F0] rounded-xl p-6">
-                  <h3 className="font-bold text-[#1A1F2E] mb-1">{advisor.name}</h3>
-                  <div className="text-xs font-semibold text-[#00968e] mb-3">{advisor.role}</div>
-                  <p className="text-[#718096] text-sm leading-relaxed">{advisor.desc}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
